@@ -28,38 +28,16 @@
 
 const formatString = function (string) {
 
-    const letterswords = string.split('');
+    if (string.length > 40) {
 
-    console.log(letterswords.length);
-    // console.log(letterswords);
-
-    // letterswords.length = 40;
-   
-
-    // // console.log(letterswords);
-
-
-    // const letters40 = letterswords.join('');
-
-    // console.log(letters40);
-
-
+        let trimString = `${string.slice(0, 40)}...`;
+        return trimString;
+    }
+    else {
+        return string;
+    }
     
-
-
-    
-
-  
-    
-   
-
-  
-    // console.log(numbersOfLetters);
-
-
-
-  // твой код
-};
+}
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
@@ -75,7 +53,5 @@ console.log(formatString('Curabitur ligula sapien.'));
 
 console.log(
   formatString(
-    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
-  ),
-);
+    'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',));
 // вернется форматированная строка
